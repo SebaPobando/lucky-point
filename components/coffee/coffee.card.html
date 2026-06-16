@@ -1,0 +1,50 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Coffee · Price, Menu & Product" subtitle="Dual price, carta row, store card" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style> body { padding: 28px; background: var(--surface-page); }
+  .blk { margin-bottom: 22px; }
+  .lbl { font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
+  .prices { display: flex; gap: 26px; align-items: center; flex-wrap: wrap; }
+  .two { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 28px; align-items: start; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+  const { PriceTag, MenuItem, ProductCard } = window.LuckyPointCoffeeDesignSystem_11711f;
+  function Demo() {
+    return (
+      <div>
+        <div className="blk">
+          <div className="lbl">PriceTag — CLP + Lucky Points (10 CLP = 1 pt)</div>
+          <div className="prices">
+            <PriceTag clp={3200} size="sm" />
+            <PriceTag clp={3800} size="md" />
+            <PriceTag clp={5500} size="lg" />
+          </div>
+        </div>
+        <div className="two">
+          <div>
+            <div className="lbl">MenuItem (carta)</div>
+            <MenuItem name="Long Black" clp={3200} description="Espresso doble vertido sobre agua caliente." />
+            <MenuItem name="Mokka Nutella" clp={5500} tag="Favorito" description="Espresso doble emulsionado con nutella y leche." divider={false} />
+          </div>
+          <div>
+            <div className="lbl">ProductCard (tienda)</div>
+            <ProductCard name="Etiopía Yirgacheffe" category="Café en grano" clp={12900} description="250g · notas florales y cítricas." onAdd={(i)=>alert('Agregado: '+i.name)} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

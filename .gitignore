@@ -1,0 +1,11 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas de configuración de editores de código
+.vscode/
+.idea/
+
+# Archivos pesados o en crudo (opcional)
+# Como la data de la carta ya se extrajo al código, ignoramos el PDF original para que no pese en el repositorio.
+uploads/
