@@ -1,69 +1,77 @@
 /* ===========================================================================
    Lucky Point Coffee — Color tokens
-   Warm, minimal specialty-coffee palette: cream surfaces, coffee browns,
-   dark-green + ink accents, and a gold "Lucky Points" accent.
    =========================================================================== */
 :root {
-  /* --- Cream / surface scale (light, clean) --- */
-  --lp-cream-50:  #FCF8F1;   /* lightest background */
-  --lp-cream-100: #F7F0E4;   /* default page background */
-  --lp-cream-200: #EFE3D1;   /* raised / sand */
-  --lp-cream-300: #E4D2B8;   /* foam, dividers on cream */
+   /* --- Cream / surface scale (Taza y fondos de tu logo) --- */
+   --lp-cream-50: #FCF6E4;
+   /* Crema / Vainilla clarito */
+   --lp-cream-100: #F1ECE1;
+   /* Gris Crema para fondo secundario */
+   --lp-cream-200: #DED7C9;
+   /* Beige para sombras */
+   --lp-cream-300: #DED7C9;
 
-  /* --- Coffee / brown scale --- */
-  --lp-espresso:  #2A1C12;   /* near-black brown — primary text */
-  --lp-coffee-700:#3E2A1B;
-  --lp-coffee-600:#5A3D27;
-  --lp-coffee-500:#6F4A30;   /* mid coffee */
-  --lp-coffee-400:#8A6243;
-  --lp-caramel:   #A9764B;   /* warm caramel */
-  --lp-latte:     #C9A57C;   /* muted milky brown */
+   /* --- Coffee / brown scale (Granos de café y delineados) --- */
+   --lp-espresso: #000000;
+   /* Negro puro (Delineado estilo cartoon) */
+   --lp-coffee-700: #5C312C;
+   /* Café oscuro rojizo (Grano de café) */
+   --lp-coffee-600: #5C312C;
+   --lp-coffee-500: #6F4A30;
+   --lp-coffee-400: #8A6243;
+   --lp-caramel: #A9764B;
+   --lp-latte: #DED7C9;
+   /* Beige */
 
-  /* --- Green accent (verde oscuro) --- */
-  --lp-forest-900:#162A1F;
-  --lp-forest:    #20392B;   /* primary dark-green accent */
-  --lp-forest-600:#2E5640;
-  --lp-forest-300:#7FA690;   /* desaturated green for surfaces/badges */
+   /* --- Green accent (Hojas y tréboles) --- */
+   --lp-forest-900: #2E5640;
+   --lp-forest: #578B56;
+   /* Verde oscuro (Hoja principal / Botones CTA) */
+   --lp-forest-600: #679B66;
+   /* Verde intermedio (Hover) */
+   --lp-forest-300: #A5D0A2;
+   /* Verde claro (Trébol) */
 
-  /* --- Ink (black accent) --- */
-  --lp-ink:       #17120E;
-  --lp-ink-soft:  #2C2620;
+   /* --- Ink (black accent) --- */
+   --lp-ink: #000000;
+   --lp-ink-soft: #2C2620;
 
-  /* --- Lucky Points gold --- */
-  --lp-gold:      #C68A2E;   /* points accent */
-  --lp-gold-soft: #E9C77E;
-  --lp-gold-bg:   #F6E7C4;
+   /* --- Lucky Points gold --- */
+   --lp-gold: #C68A2E;
+   /* Mantenemos el dorado para los puntos */
+   --lp-gold-soft: #E9C77E;
+   --lp-gold-bg: #F6E7C4;
 
-  /* --- Utility --- */
-  --lp-white:     #FFFFFF;
-  --lp-success:   #3C7A4E;
-  --lp-danger:    #B23B2E;
-  --lp-line:      rgba(42, 28, 18, 0.12);   /* hairline on cream */
-  --lp-line-soft: rgba(42, 28, 18, 0.07);
+   /* --- Utility --- */
+   --lp-white: #FFFFFF;
+   --lp-success: #578B56;
+   --lp-danger: #B23B2E;
+   --lp-line: rgba(0, 0, 0, 0.12);
+   --lp-line-soft: rgba(0, 0, 0, 0.07);
 
-  /* =========================================================================
+   /* =========================================================================
      Semantic aliases — reference these in components
      ========================================================================= */
-  --surface-page:    var(--lp-cream-100);
-  --surface-raised:  var(--lp-cream-50);
-  --surface-card:    var(--lp-white);
-  --surface-sand:    var(--lp-cream-200);
-  --surface-dark:    var(--lp-espresso);
-  --surface-forest:  var(--lp-forest);
+   --surface-page: var(--lp-cream-100);
+   --surface-raised: var(--lp-cream-50);
+   --surface-card: var(--lp-white);
+   --surface-sand: var(--lp-cream-200);
+   --surface-dark: var(--lp-espresso);
+   --surface-forest: var(--lp-forest);
 
-  --text-strong:     var(--lp-espresso);
-  --text-body:       var(--lp-coffee-700);
-  --text-muted:      var(--lp-coffee-400);
-  --text-on-dark:    var(--lp-cream-50);
-  --text-on-dark-mut:rgba(252, 248, 241, 0.66);
+   --text-strong: var(--lp-espresso);
+   --text-body: var(--lp-coffee-700);
+   --text-muted: var(--lp-coffee-400);
+   --text-on-dark: var(--lp-cream-50);
+   --text-on-dark-mut: rgba(252, 246, 228, 0.66);
 
-  --accent:          var(--lp-forest);
-  --accent-hover:    var(--lp-forest-600);
-  --accent-ink:      var(--lp-ink);
-  --points:          var(--lp-gold);
-  --points-bg:       var(--lp-gold-bg);
+   --accent: var(--lp-forest);
+   --accent-hover: var(--lp-forest-600);
+   --accent-ink: var(--lp-ink);
+   --points: var(--lp-gold);
+   --points-bg: var(--lp-gold-bg);
 
-  --border:          var(--lp-line);
-  --border-strong:   rgba(42, 28, 18, 0.22);
-  --divider:         var(--lp-line-soft);
+   --border: var(--lp-line);
+   --border-strong: rgba(0, 0, 0, 0.22);
+   --divider: var(--lp-line-soft);
 }

@@ -4,9 +4,40 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lucky Point Coffee — Café de especialidad en Osorno</title>
+
+    <!-- ===================== SEO On-Page ===================== -->
+    <title>Lucky Point Coffee | Cafetería de Especialidad en Osorno</title>
     <meta name="description"
-        content="Lucky Point Coffee: café de especialidad recién tostado en Osorno, Chile. Carta, tienda y el programa de fidelidad Lucky Points." />
+        content="Lucky Point Coffee es una cafetería y tostaduría de especialidad en Osorno, Chile. Café de grano recién tostado, carta de temporada y nuestro programa de fidelidad Lucky Points: 10 CLP = 1 punto." />
+    <meta name="keywords"
+        content="cafetería de especialidad Osorno, café de grano Osorno, tostaduría Osorno, Lucky Points, café de especialidad Chile, coffee shop Osorno" />
+    <meta name="author" content="Lucky Point Coffee" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#578B56" />
+    <link rel="canonical" href="https://sebapobando.github.io/lucky-point/" />
+
+    <!-- ===================== Open Graph (WhatsApp / Instagram / Facebook) ===================== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lucky Point Coffee" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:title" content="Lucky Point Coffee | Cafetería de Especialidad en Osorno" />
+    <meta property="og:description"
+        content="Café de grano recién tostado en Osorno, Chile. Descubre nuestra carta de especialidad y suma Lucky Points en cada visita." />
+    <meta property="og:url" content="https://sebapobando.github.io/lucky-point/" />
+    <meta property="og:image"
+        content="https://via.placeholder.com/1200x630/FCF6E4/5C312C?text=Lucky+Point+Coffee+%C2%B7+Osorno" />
+    <meta property="og:image:alt" content="Lucky Point Coffee — cafetería de especialidad en Osorno" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ===================== Twitter Card ===================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lucky Point Coffee | Cafetería de Especialidad en Osorno" />
+    <meta name="twitter:description"
+        content="Café de grano recién tostado en Osorno, Chile. Carta de especialidad y programa de fidelidad Lucky Points." />
+    <meta name="twitter:image"
+        content="https://via.placeholder.com/1200x630/FCF6E4/5C312C?text=Lucky+Point+Coffee+%C2%B7+Osorno" />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/assets/images/logos/logo.jpeg" type="image/jpeg" />
     <style>
@@ -312,7 +343,9 @@
         }
 
         .hero__media {
+            width: 100%;
             aspect-ratio: 4 / 3;
+            object-fit: cover;
             border-radius: var(--r-xl);
             box-shadow: var(--shadow-lg);
             background: linear-gradient(145deg, var(--lp-coffee-600), var(--lp-espresso));
@@ -327,7 +360,9 @@
         }
 
         .about__media {
+            width: 100%;
             aspect-ratio: 1 / 1;
+            object-fit: cover;
             border-radius: var(--r-xl);
             box-shadow: var(--shadow-md);
             background: linear-gradient(150deg, var(--lp-caramel), var(--lp-coffee-700));
@@ -445,7 +480,9 @@
         }
 
         .product-card__media {
+            width: 100%;
             aspect-ratio: 4 / 3;
+            object-fit: cover;
             background: linear-gradient(145deg, var(--lp-latte), var(--lp-coffee-500));
         }
 
@@ -542,6 +579,60 @@
             font-weight: var(--fw-bold);
             padding: 10px 20px;
             border-radius: var(--r-pill);
+        }
+
+        /* --- Teasers "Próximamente" (nuevo ecosistema) -------------------- */
+        .teasers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--sp-5);
+            margin-top: var(--sp-6);
+        }
+
+        .teaser {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--sp-3);
+            background: var(--surface-card);
+            border: var(--bw) solid var(--border);
+            border-radius: var(--r-lg);
+            box-shadow: var(--shadow-sm);
+            padding: var(--sp-6);
+            transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+        }
+
+        .teaser:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .teaser__badge {
+            font-family: var(--font-body);
+            font-weight: var(--fw-semibold);
+            font-size: var(--fs-caption);
+            letter-spacing: var(--ls-eyebrow);
+            text-transform: uppercase;
+            color: var(--lp-coffee-700);
+            background: var(--points-bg);
+            padding: 4px 12px;
+            border-radius: var(--r-pill);
+        }
+
+        .teaser__title {
+            font-size: var(--fs-h3);
+            color: var(--text-strong);
+        }
+
+        .teaser__text {
+            font-size: var(--fs-small);
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .teaser__action {
+            margin-top: var(--sp-3);
         }
 
         /* --- Footer -------------------------------------------------------- */
@@ -679,6 +770,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .teasers {
+                grid-template-columns: 1fr;
+            }
+
             .footer__grid {
                 grid-template-columns: 1fr;
             }
@@ -696,6 +791,100 @@
             }
         }
     </style>
+
+    <!-- ===================== AEO · Datos estructurados: Negocio local ===================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "@id": "https://sebapobando.github.io/lucky-point/#business",
+      "name": "Lucky Point Coffee",
+      "description": "Cafetería y tostaduría de café de especialidad en Osorno, Chile. Café de grano recién tostado, carta de temporada y el programa de fidelidad Lucky Points (10 CLP = 1 punto).",
+      "url": "https://sebapobando.github.io/lucky-point/",
+      "image": "https://via.placeholder.com/1200x630/FCF6E4/5C312C?text=Lucky+Point+Coffee+%C2%B7+Osorno",
+      "logo": "https://sebapobando.github.io/lucky-point/assets/images/logos/logo.jpeg",
+      "servesCuisine": ["Café de especialidad", "Cafetería", "Pastelería", "Sándwiches"],
+      "priceRange": "$$",
+      "currenciesAccepted": "CLP, Lucky Points",
+      "paymentAccepted": "Efectivo, Tarjeta de crédito, Tarjeta de débito, Lucky Points",
+      "telephone": "+56-64-000-0000",
+      "email": "hola@luckypoint.cl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bernardo O'Higgins 969",
+        "addressLocality": "Osorno",
+        "addressRegion": "Los Lagos",
+        "addressCountry": "CL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -40.5742,
+        "longitude": -73.1335
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Osorno"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com",
+        "https://facebook.com"
+      ]
+    }
+    </script>
+
+    <!-- ===================== AEO · Datos estructurados: Preguntas frecuentes ===================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Lucky Point Coffee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lucky Point Coffee es una cafetería y tostaduría de café de especialidad ubicada en Osorno, Región de Los Lagos, Chile. Tostamos en lotes pequeños y ofrecemos una carta de temporada con café, opciones dulces, té, pastelería y sándwiches, además de café de grano para llevar a casa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funcionan los Lucky Points?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lucky Points es nuestro programa de fidelidad: por cada 10 CLP que gastas ganas 1 Lucky Point (10 CLP = 1 punto). Cada producto de la carta y de la tienda muestra su precio en pesos y su equivalente en Lucky Points, que puedes acumular y canjear por café o productos sin mínimos ni vencimientos sorpresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ofrecen planes de suscripción mensual de café?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos preparando 'Suscripción Lucky', un plan que asegura tu café diario con credencial QR y trato VIP, junto con la opción de recargar Lucky Points por adelantado para pagar menos por tu café. Ambas funciones estarán disponibles próximamente."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -735,15 +924,18 @@
                         <a class="btn btn--secondary btn--lg" href="#puntos">Cómo funcionan los puntos</a>
                     </div>
                 </div>
-                <div class="hero__media" role="img" aria-label="Taza de café recién preparado en Lucky Point Coffee">
-                </div>
+                <img class="hero__media" loading="eager" decoding="async"
+                    src="https://via.placeholder.com/800x600/FCF6E4/5C312C?text=Lucky+Point+Coffee"
+                    alt="Taza de café recién preparado en Lucky Point Coffee" />
             </div>
         </section>
 
         <!-- ============================ NOSOTROS ============================ -->
         <section class="section" id="nosotros">
             <div class="container about__grid">
-                <div class="about__media" role="img" aria-label="Interior cálido de la cafetería Lucky Point"></div>
+                <img class="about__media" loading="lazy" decoding="async"
+                    src="https://via.placeholder.com/600x600/DED7C9/5C312C?text=Nuestro+local"
+                    alt="Interior cálido de la cafetería Lucky Point" />
                 <div class="about__text">
                     <span class="eyebrow">Quiénes somos</span>
                     <h2 class="section__title">Café honesto, hecho con cariño</h2>
@@ -1062,8 +1254,9 @@
                 </div>
                 <div class="shop-grid">
                     <article class="product-card">
-                        <div class="product-card__media" role="img" aria-label="Bolsa de café Etiopía Yirgacheffe">
-                        </div>
+                        <img class="product-card__media" loading="lazy" decoding="async"
+                            src="https://via.placeholder.com/400x300/FCF6E4/5C312C?text=Etiop%C3%ADa+Yirgacheffe"
+                            alt="Bolsa de café Etiopía Yirgacheffe" />
                         <div class="product-card__body">
                             <span class="product-card__category">Café en grano</span>
                             <h3 class="product-card__name">Etiopía Yirgacheffe</h3>
@@ -1078,7 +1271,9 @@
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-card__media" role="img" aria-label="Bolsa de café Colombia Huila"></div>
+                        <img class="product-card__media" loading="lazy" decoding="async"
+                            src="https://via.placeholder.com/400x300/F1ECE1/5C312C?text=Colombia+Huila"
+                            alt="Bolsa de café Colombia Huila" />
                         <div class="product-card__body">
                             <span class="product-card__category">Café en grano</span>
                             <h3 class="product-card__name">Colombia Huila</h3>
@@ -1093,7 +1288,9 @@
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-card__media" role="img" aria-label="Prensa francesa de vidrio"></div>
+                        <img class="product-card__media" loading="lazy" decoding="async"
+                            src="https://via.placeholder.com/400x300/DED7C9/5C312C?text=Prensa+Francesa"
+                            alt="Prensa francesa de vidrio" />
                         <div class="product-card__body">
                             <span class="product-card__category">Accesorios</span>
                             <h3 class="product-card__name">Prensa Francesa 350ml</h3>
@@ -1108,7 +1305,9 @@
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-card__media" role="img" aria-label="Taza Lucky Point de gres"></div>
+                        <img class="product-card__media" loading="lazy" decoding="async"
+                            src="https://via.placeholder.com/400x300/F6E7C4/5C312C?text=Mug+Lucky+Point"
+                            alt="Taza Lucky Point de gres" />
                         <div class="product-card__body">
                             <span class="product-card__category">Accesorios</span>
                             <h3 class="product-card__name">Mug Lucky Point</h3>
@@ -1158,6 +1357,37 @@
                 <div style="text-align: center;">
                     <span class="points__rule"><span class="price-tag__star" aria-hidden="true">★</span>Regla simple: 10
                         CLP = 1 Lucky Point</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ PRÓXIMAMENTE ============================ -->
+        <section class="section section--sand" id="proximamente">
+            <div class="container">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Nuevo ecosistema</span>
+                    <h2 class="section__title">Lo que se viene</h2>
+                    <p class="section__lead">Estamos preparando nuevas formas de disfrutar tu café diario y sacarle más
+                        provecho a tus Lucky Points.</p>
+                </div>
+                <div class="teasers">
+                    <article class="teaser">
+                        <span class="teaser__badge">Próximamente</span>
+                        <h3 class="teaser__title">Suscripción Lucky</h3>
+                        <p class="teaser__text">Tu café diario asegurado. Lleva tu credencial QR, salta la fila y recibe
+                            trato VIP en cada visita.</p>
+                        <button class="btn btn--primary teaser__action" type="button"
+                            onclick="alert('¡Próximamente!')">Quiero saber más</button>
+                    </article>
+                    <article class="teaser">
+                        <span class="teaser__badge">Próximamente</span>
+                        <h3 class="teaser__title">Recarga tus Lucky Points</h3>
+                        <p class="teaser__text">Compra paquetes de puntos por adelantado y paga menos por tu café.
+                            Mientras más recargas, más rinde cada peso.</p>
+                        <button class="btn btn--gold teaser__action" type="button"
+                            onclick="alert('¡Próximamente!')"><span class="price-tag__star"
+                                aria-hidden="true">★</span>Recargar puntos</button>
+                    </article>
                 </div>
             </div>
         </section>
